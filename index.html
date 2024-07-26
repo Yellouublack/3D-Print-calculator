@@ -11,43 +11,7 @@
         <h1>3D Printing Price Calculator</h1>
         <form id="calculator-form" class="horizontal-form">
             <div class="form-section">
-                <label for="technology">3D Printing Technology:</label>
-                <select id="technology">
-                    <option value="FDM">FDM</option>
-                    <option value="SLA">SLA</option>
-                    <option value="SLS">SLS</option>
-                    <option value="SLM">SLM</option>
-                </select>
-            </div>
-
-            <div class="form-section">
-                <label for="material">Material Type:</label>
-                <select id="material">
-                    <optgroup label="FDM">
-                        <option value="PLA">PLA</option>
-                        <option value="ABS">ABS</option>
-                        <option value="PETG">PETG</option>
-                    </optgroup>
-                    <optgroup label="SLA">
-                        <option value="Standard Resin">Standard Resin</option>
-                        <option value="Tough Resin">Tough Resin</option>
-                        <option value="Flexible Resin">Flexible Resin</option>
-                    </optgroup>
-                    <optgroup label="SLS">
-                        <option value="Nylon">Nylon</option>
-                        <option value="Glass-Filled Nylon">Glass-Filled Nylon</option>
-                        <option value="Alumide">Alumide</option>
-                    </optgroup>
-                    <optgroup label="SLM">
-                        <option value="Aluminum">Aluminum</option>
-                        <option value="Stainless Steel">Stainless Steel</option>
-                        <option value="Titanium">Titanium</option>
-                    </optgroup>
-                </select>
-            </div>
-
-            <div class="form-section">
-                <label for="material-price">Material Price:</label>
+                <label for="material-price">Cost of the Material:</label>
                 <input type="number" id="material-price" required>
                 <select id="material-price-unit">
                     <option value="g">per g</option>
@@ -56,7 +20,7 @@
             </div>
 
             <div class="form-section">
-                <label for="material-used">Material Used:</label>
+                <label for="material-used">Material Used for Printing:</label>
                 <input type="number" id="material-used" required>
                 <select id="material-used-unit">
                     <option value="g">g</option>
@@ -74,13 +38,21 @@
             </div>
 
             <div class="form-section">
-                <label for="labor-cost">Labor Cost (per hour):</label>
+                <label for="labor-cost">Labor Cost:</label>
                 <input type="number" id="labor-cost" required>
+                <select id="labor-cost-unit">
+                    <option value="hour">per hour</option>
+                    <option value="minute">per minute</option>
+                </select>
             </div>
 
             <div class="form-section">
-                <label for="print-time">Print Time (hours):</label>
+                <label for="print-time">Print Time:</label>
                 <input type="number" id="print-time" required>
+                <select id="print-time-unit">
+                    <option value="hour">hours</option>
+                    <option value="minute">minutes</option>
+                </select>
             </div>
 
             <div class="form-section">
