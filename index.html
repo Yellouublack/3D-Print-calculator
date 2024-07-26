@@ -9,76 +9,98 @@
 <body>
     <div class="container">
         <h1>3D Printing Price Calculator</h1>
-        <form id="calculator-form">
-            <label for="technology">3D Printing Technology:</label>
-            <select id="technology">
-                <option value="FDM">FDM</option>
-                <option value="SLA">SLA</option>
-                <option value="SLS">SLS</option>
-                <option value="SLM">SLM</option>
-            </select>
+        <form id="calculator-form" class="horizontal-form">
+            <div class="form-section">
+                <label for="technology">3D Printing Technology:</label>
+                <select id="technology">
+                    <option value="FDM">FDM</option>
+                    <option value="SLA">SLA</option>
+                    <option value="SLS">SLS</option>
+                    <option value="SLM">SLM</option>
+                </select>
+            </div>
 
-            <label for="material">Material Type:</label>
-            <select id="material">
-                <optgroup label="FDM">
-                    <option value="PLA">PLA</option>
-                    <option value="ABS">ABS</option>
-                    <option value="PETG">PETG</option>
-                </optgroup>
-                <optgroup label="SLA">
-                    <option value="Standard Resin">Standard Resin</option>
-                    <option value="Tough Resin">Tough Resin</option>
-                    <option value="Flexible Resin">Flexible Resin</option>
-                </optgroup>
-                <optgroup label="SLS">
-                    <option value="Nylon">Nylon</option>
-                    <option value="Glass-Filled Nylon">Glass-Filled Nylon</option>
-                    <option value="Alumide">Alumide</option>
-                </optgroup>
-                <optgroup label="SLM">
-                    <option value="Aluminum">Aluminum</option>
-                    <option value="Stainless Steel">Stainless Steel</option>
-                    <option value="Titanium">Titanium</option>
-                </optgroup>
-            </select>
+            <div class="form-section">
+                <label for="material">Material Type:</label>
+                <select id="material">
+                    <optgroup label="FDM">
+                        <option value="PLA">PLA</option>
+                        <option value="ABS">ABS</option>
+                        <option value="PETG">PETG</option>
+                    </optgroup>
+                    <optgroup label="SLA">
+                        <option value="Standard Resin">Standard Resin</option>
+                        <option value="Tough Resin">Tough Resin</option>
+                        <option value="Flexible Resin">Flexible Resin</option>
+                    </optgroup>
+                    <optgroup label="SLS">
+                        <option value="Nylon">Nylon</option>
+                        <option value="Glass-Filled Nylon">Glass-Filled Nylon</option>
+                        <option value="Alumide">Alumide</option>
+                    </optgroup>
+                    <optgroup label="SLM">
+                        <option value="Aluminum">Aluminum</option>
+                        <option value="Stainless Steel">Stainless Steel</option>
+                        <option value="Titanium">Titanium</option>
+                    </optgroup>
+                </select>
+            </div>
 
-            <label for="material-price">Material Price:</label>
-            <input type="number" id="material-price" required>
-            <select id="material-price-unit">
-                <option value="g">per g</option>
-                <option value="kg">per kg</option>
-            </select>
+            <div class="form-section">
+                <label for="material-price">Material Price:</label>
+                <input type="number" id="material-price" required>
+                <select id="material-price-unit">
+                    <option value="g">per g</option>
+                    <option value="kg">per kg</option>
+                </select>
+            </div>
 
-            <label for="material-used">Material Used:</label>
-            <input type="number" id="material-used" required>
-            <select id="material-used-unit">
-                <option value="g">g</option>
-                <option value="kg">kg</option>
-            </select>
+            <div class="form-section">
+                <label for="material-used">Material Used:</label>
+                <input type="number" id="material-used" required>
+                <select id="material-used-unit">
+                    <option value="g">g</option>
+                    <option value="kg">kg</option>
+                </select>
+            </div>
 
-            <label for="currency">Currency:</label>
-            <select id="currency">
-                <option value="$">USD ($)</option>
-                <option value="₹">INR (₹)</option>
-                <option value="€">EUR (€)</option>
-            </select>
+            <div class="form-section">
+                <label for="currency">Currency:</label>
+                <select id="currency">
+                    <option value="$">USD ($)</option>
+                    <option value="₹">INR (₹)</option>
+                    <option value="€">EUR (€)</option>
+                </select>
+            </div>
 
-            <label for="labor-cost">Labor Cost (per hour):</label>
-            <input type="number" id="labor-cost" required>
+            <div class="form-section">
+                <label for="labor-cost">Labor Cost (per hour):</label>
+                <input type="number" id="labor-cost" required>
+            </div>
 
-            <label for="print-time">Print Time (hours):</label>
-            <input type="number" id="print-time" required>
+            <div class="form-section">
+                <label for="print-time">Print Time (hours):</label>
+                <input type="number" id="print-time" required>
+            </div>
 
-            <label for="profit-margin">Profit Margin (%):</label>
-            <input type="number" id="profit-margin" required>
+            <div class="form-section">
+                <label for="profit-margin">Profit Margin (%):</label>
+                <input type="number" id="profit-margin" required>
+            </div>
 
-            <label for="machine-wattage">Machine Wattage (W):</label>
-            <input type="number" id="machine-wattage" required>
+            <div class="form-section">
+                <label for="machine-wattage">Machine Wattage (W):</label>
+                <input type="number" id="machine-wattage" required>
+            </div>
 
-            <label for="electricity-cost">Electricity Cost (per unit):</label>
-            <input type="number" id="electricity-cost" required>
+            <div class="form-section">
+                <label for="electricity-cost">Electricity Cost (per unit):</label>
+                <input type="number" id="electricity-cost" required>
+            </div>
 
-            <button type="button" onclick="calculatePrice()">Calculate</button>
+            <div class="form-section">
+                <button type="button" onclick="calculatePrice()">Calculate</button>
+            </div>
         </form>
         <div id="result"></div>
 
