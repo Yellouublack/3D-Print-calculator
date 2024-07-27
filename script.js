@@ -36,5 +36,8 @@ function calculatePrice() {
     const finalPrice = totalCost * (1 + profitMargin / 100);
 
     // Display the result
-    document.getElementById('result').innerHTML = `Total Cost: ${currency}${finalPrice.toFixed(2)}`;
+    const resultContainer = document.getElementById('result-container');
+    const resultDiv = document.getElementById('result');
+    resultDiv.innerHTML = `Total Cost: ${currency}${finalPrice.toFixed(2)}`;
+    resultContainer.style.display = 'block';
 }
