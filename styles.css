@@ -63,9 +63,14 @@ button:hover {
     background-color: #0056b3;
 }
 
-#result {
+#result-container {
     margin-top: 20px;
     font-size: 1.2em;
+    display: none;
+}
+
+#result-container h2 {
+    margin-bottom: 10px;
 }
 
 .ads {
