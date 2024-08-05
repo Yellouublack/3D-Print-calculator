@@ -50,6 +50,15 @@ input, select {
     box-sizing: border-box;
 }
 
+.time-inputs {
+    display: flex;
+    justify-content: space-between;
+}
+
+.time-inputs input {
+    width: 48%;
+}
+
 button {
     padding: 10px;
     background-color: #007BFF;
