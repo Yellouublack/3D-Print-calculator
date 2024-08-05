@@ -6,8 +6,8 @@ function calculatePrice() {
     const currency = document.getElementById('currency').value;
     const laborCost = parseFloat(document.getElementById('labor-cost').value);
     const laborCostUnit = document.getElementById('labor-cost-unit').value;
-    const printTime = parseFloat(document.getElementById('print-time').value);
-    const printTimeUnit = document.getElementById('print-time-unit').value;
+    const printTimeHours = parseFloat(document.getElementById('print-time-hours').value);
+    const printTimeMinutes = parseFloat(document.getElementById('print-time-minutes').value);
     const profitMargin = parseFloat(document.getElementById('profit-margin').value);
     const machineWattage = parseFloat(document.getElementById('machine-wattage').value);
     const electricityCost = parseFloat(document.getElementById('electricity-cost').value);
@@ -19,11 +19,11 @@ function calculatePrice() {
     // Calculate material cost
     const materialCost = materialPricePerGram * materialUsedInGrams;
 
-    // Convert print time to hours if in minutes
-    const printTimeInHours = printTimeUnit === 'minute' ? printTime / 60 : printTime;
+    // Convert print time to hours
+    const printTimeInHours = printTimeHours + (printTimeMinutes / 60);
 
     // Calculate labor cost
-    const laborCostTotal = laborCostUnit === 'minute' ? laborCost * printTimeInHours * 60 : laborCost * printTimeInHours;
+    const laborCostTotal = laborCostUnit === 'minute' ? laborCost * (printTimeInHours * 60) : laborCost * printTimeInHours;
 
     // Calculate electricity cost
     const electricityUsed = (machineWattage * printTimeInHours) / 1000; // kWh
