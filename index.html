@@ -48,11 +48,10 @@
 
             <div class="form-section">
                 <label for="print-time">Print Time:</label>
-                <input type="number" id="print-time" required>
-                <select id="print-time-unit">
-                    <option value="hour">hours</option>
-                    <option value="minute">minutes</option>
-                </select>
+                <div class="time-inputs">
+                    <input type="number" id="print-time-hours" placeholder="Hours" required>
+                    <input type="number" id="print-time-minutes" placeholder="Minutes" required>
+                </div>
             </div>
 
             <div class="form-section">
